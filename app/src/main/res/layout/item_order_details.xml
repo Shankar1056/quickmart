@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:paddingBottom="@dimen/narrow"
+	android:paddingEnd="@dimen/standard"
+	android:paddingStart="@dimen/standard"
+	android:paddingTop="@dimen/narrow"
+	tools:ignore="MissingPrefix">
+
+	<ImageView
+		android:id="@+id/iv_image"
+		android:layout_width="100dp"
+		android:layout_height="80dp"
+		android:contentDescription="@string/content_description"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/standard"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/tv_title"
+			fontPath="@string/font_medium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/narrow"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_small"
+			tools:text="Potato"/>
+
+		<TextView
+			android:id="@+id/tv_quantity"
+			fontPath="@string/font_medium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="@dimen/thin"
+			android:layout_marginStart="@dimen/narrow"
+			android:textColor="@color/black"
+			android:textSize="@dimen/text_small"
+			tools:text="1 kg"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/thin"
+			android:orientation="horizontal">
+
+			<TextView
+				fontPath="@string/font_medium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/narrow"
+				android:text="@string/unit_kg"
+				android:textColor="@color/black"
+				android:textSize="@dimen/text_small"/>
+
+			<TextView
+				android:id="@+id/tv_price"
+				fontPath="@string/font_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:textSize="@dimen/text_small"
+				tools:text="\u20B9 35"/>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

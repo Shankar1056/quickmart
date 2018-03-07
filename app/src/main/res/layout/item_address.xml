@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="@dimen/thin"
+	android:background="@color/white"
+	android:orientation="horizontal"
+	android:padding="@dimen/narrow"
+	tools:ignore="MissingPrefix">
+
+	<RadioButton
+		android:id="@+id/rb_address"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"/>
+
+	<TextView
+		android:id="@+id/tv_address"
+		fontPath="@string/font_medium"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/narrow"
+		android:layout_weight="1"
+		android:text="Mahendra\n4/80, 1st Floor, Above IDBI Bank, 80 Feet Road, Ashwath Nagar, Dollars Colony, SanjayNagar, Bangalore:\n560094, Karnataka"
+		android:textSize="@dimen/text_very_small"/>
+
+	<ImageView
+		android:id="@+id/iv_delete"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:contentDescription="@string/content_description"
+		android:src="@drawable/ic_delete_grey_600_18dp"/>
+</LinearLayout>

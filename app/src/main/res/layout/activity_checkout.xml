@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.bigappcompany.quikmart.activity.CheckoutActivity"
+	tools:ignore="MissingPrefix">
+
+	<include layout="@layout/toolbar"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<!-- default view -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<android.support.v4.widget.NestedScrollView
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:paddingBottom="@dimen/narrow"
+						android:paddingStart="@dimen/standard"
+						android:paddingTop="@dimen/narrow"
+						android:text="@string/order_summary"
+						android:textColor="@color/black"
+						tools:ignore="RtlSymmetry"/>
+
+					<LinearLayout
+						android:id="@+id/ll_promo_listener"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/narrow"
+						android:background="@color/white"
+						android:gravity="center">
+
+						<TextView
+							fontPath="@string/font_medium"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center"
+							android:background="@color/white"
+							android:drawablePadding="@dimen/standard"
+							android:drawableStart="@drawable/ic_promo_primary_24dp"
+							android:gravity="center"
+							android:padding="@dimen/thick"
+							android:text="@string/promo_code"
+							android:textColor="@color/colorPrimary"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/narrow"
+						android:background="@color/white"
+						android:orientation="horizontal"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/medium">
+
+						<TextView
+							fontPath="@string/font_medium"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="@string/items"/>
+
+						<TextView
+							android:id="@+id/tv_item"
+							fontPath="@string/font_medium"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							tools:text="\u20B9 65"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:orientation="horizontal"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/narrow">
+
+						<TextView
+							fontPath="@string/font_medium"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="@string/delivery"/>
+
+						<TextView
+							android:id="@+id/tv_delivery"
+							fontPath="@string/font_medium"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							tools:text="\u20B9 30"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:orientation="horizontal"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/narrow">
+
+						<TextView
+							fontPath="@string/font_medium"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="@string/sub_total"/>
+
+						<TextView
+							android:id="@+id/tv_sub_total"
+							fontPath="@string/font_medium"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/black"
+							tools:text="\u20B9 96"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:orientation="horizontal"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/standard">
+
+						<TextView
+							fontPath="@string/font_medium"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="@string/discount"/>
+
+						<TextView
+							android:id="@+id/tv_discount"
+							fontPath="@string/font_medium"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/black"
+							tools:text="\u20B9 00"/>
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:orientation="horizontal"
+						android:paddingBottom="@dimen/standard"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/standard">
+
+						<TextView
+							fontPath="@string/font_bold"
+							android:layout_width="0dp"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:text="@string/amount_payable"
+							android:textColor="@color/black"
+							android:textSize="@dimen/text_medium"/>
+
+						<TextView
+							android:id="@+id/tv_grand_total"
+							fontPath="@string/font_bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/black"
+							android:textSize="@dimen/text_medium"
+							tools:text="\u20B9 95"/>
+					</LinearLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_400"/>
+
+					<TextView
+						android:id="@+id/tv_label_address"
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:drawableEnd="@drawable/ic_edit_orange_24dp"
+						android:gravity="center_vertical"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/standard"
+						android:text="@string/shipping_to"
+						android:textColor="@color/black"/>
+
+					<TextView
+						android:id="@+id/tv_address"
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/large"
+						android:paddingStart="@dimen/large"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="Mahendra\n4/80, 1st Floor, Above IDBI Bank"/>
+
+					<TextView
+						android:id="@+id/tv_label_date_time"
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:drawableEnd="@drawable/ic_edit_orange_24dp"
+						android:gravity="center_vertical"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/standard"
+						android:text="@string/delivery_date_time"
+						android:textColor="@color/black"/>
+
+					<TextView
+						android:id="@+id/tv_date_time"
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:paddingBottom="@dimen/thick"
+						android:paddingEnd="@dimen/large"
+						android:paddingStart="@dimen/large"
+						android:paddingTop="@dimen/thick"
+						android:textSize="@dimen/text_small"
+						tools:text="Tomorrow, 5 PM - 7 PM"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.5dp"
+						android:background="@color/grey_400"/>
+
+					<TextView
+						fontPath="@string/font_medium"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/white"
+						android:gravity="center_vertical"
+						android:paddingBottom="@dimen/standard"
+						android:paddingEnd="@dimen/medium"
+						android:paddingStart="@dimen/medium"
+						android:paddingTop="@dimen/standard"
+						android:text="@string/select_payment"
+						android:textColor="@color/black"/>
+
+					<RadioGroup
+						android:id="@+id/rg_payment"
+						android:layout_width="match_parent"
+						android:layout_height="0dp"
+						android:layout_weight="1"
+						android:background="@color/white"
+						android:orientation="vertical"
+						android:paddingBottom="@dimen/standard"/>
+				</LinearLayout>
+			</android.support.v4.widget.NestedScrollView>
+
+			<TextView
+				android:id="@+id/tv_proceed_to_pay"
+				fontPath="@string/font_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/colorPrimary"
+				android:drawableEnd="@drawable/ic_keyboard_arrow_right_white_24dp"
+				android:gravity="center"
+				android:padding="@dimen/standard"
+				android:text="@string/proceed_to_pay"
+				android:textAllCaps="true"
+				android:textColor="@color/white"
+				android:textSize="@dimen/text_medium"/>
+		</LinearLayout>
+
+		<!-- promo view -->
+		<LinearLayout
+			android:id="@+id/ll_promo"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/transparent_black"
+			android:clickable="true"
+			android:focusable="true"
+			android:orientation="vertical"
+			android:visibility="gone">
+
+			<TextView
+				fontPath="@string/font_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white"
+				android:paddingBottom="@dimen/narrow"
+				android:paddingStart="@dimen/standard"
+				android:paddingTop="@dimen/narrow"
+				android:text="@string/order_summary"
+				android:textColor="@color/black"
+				android:visibility="invisible"
+				tools:ignore="RtlSymmetry"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/narrow"
+				android:background="@color/white"
+				android:gravity="center">
+
+				<TextView
+					fontPath="@string/font_medium"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:background="@color/white"
+					android:drawablePadding="@dimen/standard"
+					android:drawableStart="@drawable/ic_promo_primary_24dp"
+					android:gravity="center"
+					android:padding="@dimen/thick"
+					android:text="@string/promo_code"
+					android:textColor="@color/colorPrimary"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="@dimen/narrow"
+				android:background="@drawable/white_rounded_corners"
+				android:orientation="horizontal"
+				android:paddingBottom="@dimen/narrow"
+				android:paddingEnd="@dimen/thick"
+				android:paddingStart="@dimen/narrow"
+				android:paddingTop="@dimen/narrow">
+
+				<android.support.v7.widget.AppCompatEditText
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:background="@android:color/transparent"
+					android:hint="@string/hint_promo"
+					android:paddingBottom="@dimen/standard"
+					android:paddingEnd="@dimen/narrow"
+					android:paddingStart="@dimen/narrow"
+					android:paddingTop="@dimen/standard"
+					android:textSize="@dimen/text_small"/>
+
+				<android.support.v7.widget.AppCompatButton
+					android:id="@+id/btn_promo_apply"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@color/colorPrimary"
+					android:text="@string/apply"
+					android:textColor="@color/white"/>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="@dimen/narrow"
+				android:layout_marginStart="@dimen/narrow"
+				android:background="@drawable/white_rounded_corners"
+				android:orientation="vertical"
+				android:padding="@dimen/standard">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/promo_term1"
+					android:textSize="@dimen/text_small"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/standard"
+					android:text="@string/promo_term2"
+					android:textSize="@dimen/text_small"/>
+			</LinearLayout>
+		</LinearLayout>
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/background"
+	android:fitsSystemWindows="true"
+	android:orientation="vertical"
+	tools:context="com.bigappcompany.quikmart.activity.MainActivity">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="5">
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom|center_horizontal"
+			android:contentDescription="@null"
+			android:src="@drawable/art_logo_orange_178dp"/>
+	</FrameLayout>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="4">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/iv_building1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/content_description"
+				android:scaleType="fitXY"
+				android:src="@drawable/building"/>
+
+			<ImageView
+				android:id="@+id/iv_building2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:contentDescription="@string/content_description"
+				android:scaleType="fitXY"
+				android:src="@drawable/building"/>
+		</FrameLayout>
+
+		<ImageView
+			android:id="@+id/iv_cloud1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="@string/content_description"
+			android:src="@drawable/cloud_1"/>
+
+		<ImageView
+			android:id="@+id/iv_cloud2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:contentDescription="@string/content_description"
+			android:src="@drawable/cloud_2"/>
+
+		<ImageView
+			android:id="@+id/iv_cart"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal|bottom"
+			android:layout_marginBottom="3dp"
+			android:contentDescription="@string/content_description"
+			android:src="@drawable/cart"/>
+	</FrameLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="2"/>
+</LinearLayout>

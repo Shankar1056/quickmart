@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/action_cart"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:clickable="true"
+	android:paddingEnd="@dimen/narrow"
+	android:paddingStart="@dimen/standard"
+	tools:ignore="MissingPrefix">
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/narrow"
+		android:contentDescription="@string/action_cart"
+		android:src="@drawable/ic_cart_white_24dp"/>
+
+	<TextView
+		android:id="@+id/tv_notif_count"
+		fontPath="@string/font_medium"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top|end"
+		android:background="@drawable/shape_notification"
+		android:gravity="center"
+		android:lines="1"
+		android:paddingEnd="@dimen/thin"
+		android:paddingStart="@dimen/thin"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_small"
+		android:textStyle="bold"
+		tools:text="2"/>
+</FrameLayout>

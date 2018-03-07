@@ -1,0 +1,163 @@
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.bigappcompany.quikmart.activity.CartActivity"
+	tools:ignore="MissingPrefix">
+
+	<include layout="@layout/toolbar"/>
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+		<LinearLayout
+			android:id="@+id/ll_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/rv_cart"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:background="@color/white"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/narrow"
+				android:background="@color/white"
+				android:orientation="vertical"
+				android:padding="@dimen/standard">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:id="@+id/tv_label_sub_total"
+						fontPath="@string/font_medium"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/format_cart_subtotal"/>
+
+					<TextView
+						android:id="@+id/tv_sub_total"
+						fontPath="@string/font_medium"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/black"
+						tools:text="\u20B9 60"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/narrow">
+
+					<TextView
+						fontPath="@string/font_medium"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/cart_shipping_charges"
+						android:textColor="@color/grey_400"/>
+
+					<TextView
+						android:id="@+id/tv_shipping_charge"
+						fontPath="@string/font_medium"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/black"
+						tools:text="\u20B9 35"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/standard">
+
+					<TextView
+						fontPath="@string/font_medium"
+						android:layout_width="0dp"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/cart_estimated"/>
+
+					<TextView
+						android:id="@+id/tv_grand_total"
+						fontPath="@string/font_medium"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/colorPrimary"
+						android:textStyle="bold"
+						tools:text="\u20B9 90"/>
+				</LinearLayout>
+			</LinearLayout>
+
+			<TextView
+				fontPath="@string/font_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/thin"
+				android:background="@color/yellow"
+				android:gravity="center"
+				android:text="@string/hint_cart"
+				android:textSize="@dimen/text_small"
+				android:visibility="gone"/>
+
+			<TextView
+				android:id="@+id/tv_checkout"
+				fontPath="@string/font_medium"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/thin"
+				android:background="@color/colorPrimary"
+				android:drawableEnd="@drawable/ic_keyboard_arrow_right_white_24dp"
+				android:gravity="center"
+				android:padding="@dimen/standard"
+				android:text="@string/checkout"
+				android:textAllCaps="true"
+				android:textColor="@color/white"
+				android:textSize="16sp"
+				android:textStyle="bold"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/ll_empty"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:orientation="vertical">
+
+			<TextView
+				fontPath="@string/font_medium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:contentDescription="@null"
+				android:drawablePadding="@dimen/medium"
+				android:drawableTop="@drawable/art_empty_cart"
+				android:text="@string/empty_cart"/>
+
+			<android.support.v7.widget.AppCompatButton
+				android:id="@+id/btn_home"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/medium"
+				android:background="@drawable/draw_primary_filled_corner"
+				android:paddingEnd="@dimen/medium"
+				android:paddingStart="@dimen/medium"
+				android:text="@string/shop_now"
+				android:textColor="@color/white"/>
+		</LinearLayout>
+
+	</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

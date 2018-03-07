@@ -1,0 +1,127 @@
+<android.support.v4.widget.NestedScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_gravity="start"
+	android:background="@color/white"
+	android:fitsSystemWindows="true"
+	tools:ignore="MissingPrefix">
+
+	<LinearLayout
+		android:id="@+id/ll_navigation"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/tv_mobile"
+			fontPath="@string/font_medium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/grey_200"
+			android:drawablePadding="@dimen/standard"
+			android:drawableStart="@drawable/ic_mobile_orange_16dp"
+			android:fontFamily="sans-serif-medium"
+			android:gravity="bottom"
+			android:paddingBottom="@dimen/standard"
+			android:paddingEnd="@dimen/medium"
+			android:paddingStart="@dimen/medium"
+			android:paddingTop="@dimen/activity_vertical_margin"
+			android:text="9663379596"
+			android:textColor="@color/grey_750"
+			android:textSize="@dimen/text_small"/>
+
+		<TextView
+			fontPath="@string/font_medium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/drawer_category"
+			android:paddingBottom="@dimen/standard"
+			android:paddingEnd="@dimen/large"
+			android:paddingStart="@dimen/large"
+			android:paddingTop="@dimen/standard"
+			android:text="@string/my_information"
+			android:textColor="@color/colorPrimary"
+			android:textSize="@dimen/text_very_small"/>
+
+		<TextView
+			android:id="@+id/nav_my_orders"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_order_orange_16dp"
+			android:text="@string/my_orders"/>
+
+		<TextView
+			android:id="@+id/nav_my_cart"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_cart_orange_16dp"
+			android:text="@string/my_cart"/>
+
+		<TextView
+			android:id="@+id/nav_my_addresses"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="@dimen/standard"
+			android:drawableStart="@drawable/ic_address_orange_16dp"
+			android:text="@string/my_addresses"/>
+
+		<TextView
+			fontPath="@string/font_medium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@drawable/drawer_category"
+			android:paddingBottom="@dimen/standard"
+			android:paddingEnd="@dimen/large"
+			android:paddingStart="@dimen/large"
+			android:paddingTop="@dimen/standard"
+			android:text="@string/others"
+			android:textColor="@color/colorPrimary"
+			android:textSize="@dimen/text_very_small"/>
+
+		<TextView
+			android:id="@+id/nav_contact_us"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/standard"
+			android:drawableStart="@drawable/ic_profile_orange_16dp"
+			android:text="@string/contact_us"/>
+
+		<TextView
+			android:id="@+id/nav_rate_us"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_star_orange_16dp"
+			android:text="@string/rate_us"/>
+
+		<TextView
+			android:id="@+id/nav_share"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_share_orange_16dp"
+			android:text="@string/share"/>
+
+		<TextView
+			android:id="@+id/nav_about_us"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_user_info_orange_16dp"
+			android:text="@string/about_us"/>
+
+		<TextView
+			android:id="@+id/nav_logout"
+			style="@style/NavigationText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:drawableStart="@drawable/ic_power_orange_16dp"
+			android:text="@string/logout"/>
+	</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

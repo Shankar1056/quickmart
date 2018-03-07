@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:orientation="horizontal"
+	android:paddingEnd="@dimen/standard"
+	android:paddingStart="@dimen/standard">
+
+	<ImageView
+		android:id="@+id/iv_product"
+		android:layout_width="@dimen/xxlarge"
+		android:layout_height="@dimen/xxlarge"
+		android:contentDescription="@string/content_description"/>
+
+	<View
+		android:layout_width="1px"
+		android:layout_height="match_parent"
+		android:background="@color/white"/>
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="bottom"
+		android:orientation="vertical"
+		android:paddingBottom="@dimen/narrow"
+		android:paddingEnd="@dimen/medium"
+		android:paddingStart="@dimen/standard">
+
+		<!--<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="80dp"
+			android:contentDescription="@string/content_description"
+			android:src="@drawable/ic_filter_list_white_18dp"/>-->
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/price"
+				android:textSize="@dimen/text_very_small"/>
+
+			<TextView
+				android:id="@+id/tv_total_price"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/standard"
+				android:text="35/-"
+				android:textSize="@dimen/text_big"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_vertical"
+			android:orientation="horizontal">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/unit"
+				android:textSize="@dimen/text_very_small"/>
+
+			<TextView
+				android:id="@+id/tv_unit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:text="1 kg"
+				android:textSize="@dimen/text_very_small"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:contentDescription="@string/content_description"
+		android:src="@drawable/ic_keyboard_arrow_right_white_24dp"/>
+</LinearLayout>

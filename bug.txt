@@ -1,0 +1,18 @@
+Issue: Cannot decrease item quantity from cart
+Description: Fresh Tomato-Hybrid, 1kg (approx. 13 to 14 nos) was unable to reduce from the cart
+Request:
+           http://13.126.166.145/quikmart-backend/v1/cart
+           {
+             "product_id": "2874",
+             "qty": 4.0,
+             "combination_id": "20",
+             "session_token": "dMmoF8dmKQRW2LovmoUY1FvXBJCKgWQ495CMQPYu",
+             "source": "ANDROID",
+             "app_version": "1.0",
+             "app_version_code": 1.0
+           }
+Response:
+            {
+              "data": "",
+              "msg": "Unable to add item to cart,try later"
+            }

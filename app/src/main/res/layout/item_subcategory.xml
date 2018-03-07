@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="@dimen/narrow"
+	android:background="@color/white"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		android:id="@+id/tv_title"
+		fontPath="@string/font_bold"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/thick"
+		android:paddingTop="@dimen/thin"
+		android:text="@string/vegetables"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_small"
+		android:typeface="normal"/>
+
+	<TextView
+		android:id="@+id/tv_view_all"
+		fontPath="@string/font_medium"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:paddingEnd="@dimen/narrow"
+		android:paddingStart="@dimen/narrow"
+		android:paddingTop="@dimen/thin"
+		android:text="@string/see_all"
+		android:textColor="@color/colorPrimary"
+		android:textSize="@dimen/text_small"/>
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/rv_group"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tv_view_all"
+		tools:listitem="@layout/item_group"/>
+
+</RelativeLayout>

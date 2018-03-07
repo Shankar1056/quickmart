@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white"
+	android:orientation="vertical"
+	tools:ignore="MissingPrefix">
+
+	<TextView
+		fontPath="@string/font_medium"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:padding="@dimen/thick"
+		android:text="@string/pick_date_time"
+		android:textColor="@color/black"
+		android:textSize="@dimen/text_medium"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/grey_600"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_date"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			app:layoutManager="LinearLayoutManager"
+			tools:listitem="@layout/item_combination"/>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_time"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/standard"
+			android:layout_weight="1"
+			app:layoutManager="LinearLayoutManager"
+			tools:listitem="@layout/item_combination"/>
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:background="@color/grey_600"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/tv_cancel"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:padding="@dimen/standard"
+			android:text="@string/cancel"
+			android:textSize="@dimen/text_medium"/>
+
+		<TextView
+			android:id="@+id/tv_done"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:padding="@dimen/standard"
+			android:text="@string/done"
+			android:textColor="@color/maroon"
+			android:textSize="@dimen/text_medium"/>
+	</LinearLayout>
+</LinearLayout>

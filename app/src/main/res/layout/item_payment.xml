@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/rb_cod"
+	fontPath="@string/font_medium"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginStart="@dimen/large"
+	android:paddingStart="@dimen/standard"
+	android:textColor="@color/selector_payment"
+	android:textSize="@dimen/text_small"
+	app:buttonTint="@color/colorPrimary"
+	tools:ignore="MissingPrefix"
+	tools:text="Cash on delivery"/>

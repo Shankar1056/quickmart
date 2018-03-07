@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.bigappcompany.quikmart.activity.CartActivity"
+	tools:ignore="MissingPrefix">
+
+	<include layout="@layout/toolbar"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/white"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<TextView
+			android:id="@+id/tv_label"
+			fontPath="@string/font_medium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/white"
+			android:paddingBottom="@dimen/narrow"
+			android:paddingEnd="@dimen/medium"
+			android:paddingStart="@dimen/medium"
+			android:paddingTop="@dimen/narrow"
+			android:text="@string/shipping_to"/>
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rv_address"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tv_label"/>
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab_add"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_below="@id/rv_address"
+			android:layout_margin="@dimen/standard"
+			android:src="@drawable/ic_add_white_24dp"/>
+
+		<TextView
+			android:id="@+id/tv_proceed_to_pay"
+			fontPath="@string/font_medium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:background="@color/colorPrimary"
+			android:drawableEnd="@drawable/ic_keyboard_arrow_right_white_24dp"
+			android:gravity="center"
+			android:padding="@dimen/standard"
+			android:text="@string/proceed_to_pay"
+			android:textAllCaps="true"
+			android:textColor="@color/white"
+			android:textSize="@dimen/text_medium"/>
+
+		<TextView
+			android:id="@+id/tv_empty"
+			fontPath="@string/font_medium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:drawableTop="@drawable/art_empty_address"
+			android:text="@string/empty_address"/>
+	</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

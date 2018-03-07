@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "386590493976",
+    "firebase_url": "https://quikmart-b6474.firebaseio.com",
+    "project_id": "quikmart-b6474",
+    "storage_bucket": "quikmart-b6474.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386590493976:android:1d91a5415420b0f1",
+        "android_client_info": {
+          "package_name": "com.bigappcompany.quikmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386590493976-ca3dim16qj4i4l5dkdkst5kfq6vbq5jo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigappcompany.quikmart",
+            "certificate_hash": "aa421dd56121b830cc3a2b6f48e70fa021e04a37"
+          }
+        },
+        {
+          "client_id": "386590493976-4i1tfbh60sn56qc3mku9m0onlnhm51k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi9fJ48YWAwMt-HupFwJHPyVDx4mNH830"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386590493976-4i1tfbh60sn56qc3mku9m0onlnhm51k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
